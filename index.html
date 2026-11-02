@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Farmer Procurement System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>🌾 Smart Farmer</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#farmer">Farmer</a>
+        <a href="#buyer">Buyer</a>
+        <a href="#orders">Orders</a>
+    </nav>
+</header>
+
+<!-- PAGE 1 HOME -->
+
+<section id="home" class="hero">
+    <h1>Smart Farmer Procurement System</h1>
+    <h3>Connecting Farmers Directly With Buyers</h3>
+    <p>Sell Smartly | Buy Easily | Grow Together</p>
+    <a href="#farmer" class="btn">Get Started</a>
+</section>
+
+<section>
+    <h2>Our Services</h2>
+    <div class="cards">
+        <div class="card">👨‍🌾<h3>Farmer Registration</h3>
+        <p>Register and sell agricultural products.</p></div>
+
+        <div class="card">🛒<h3>Buyer Marketplace</h3>
+        <p>Buy fresh crops directly from farmers.</p></div>
+
+        <div class="card">📦<h3>Order Management</h3>
+        <p>Track and manage procurement orders.</p></div>
+    </div>
+</section>
+
+<section class="stats">
+    <h2>Platform Statistics</h2>
+    <div class="cards">
+        <div class="card"><h2 id="totalCrops">0</h2>Available Crops</div>
+        <div class="card"><h2 id="totalFarmers">0</h2>Farmers</div>
+        <div class="card"><h2 id="totalOrders">0</h2>Orders</div>
+    </div>
+</section>
+
+<!-- PAGE 2 FARMER -->
+
+<section id="farmer">
+    <h1>👨‍🌾 Farmer Dashboard</h1>
+    <div class="form-box">
+        <h2>Register Your Crop</h2>
+
+        <form id="cropForm">
+            <input id="farmerName" placeholder="Farmer Name" required>
+            <input id="farmerMobile" type="tel"
+            placeholder="10 Digit Mobile Number"
+            pattern="[0-9]{10}" maxlength="10" required>
+
+            <select id="cropName" required>
+                <option value="">Select Crop</option>
+                <option>Wheat</option>
+                <option>Rice</option>
+                <option>Onion</option>
+                <option>Tomato</option>
+                <option>Potato</option>
+                <option>Soybean</option>
+                <option>Cotton</option>
+                <option>Maize</option>
+                <option>Sugarcane</option>
+            </select>
+
+            <input id="quantity" type="number"
+            placeholder="Quantity in KG" min="1" required>
+
+            <input id="price" type="number"
+            placeholder="Price per KG ₹" min="0.01" step="0.01" required>
+
+            <input id="location" placeholder="Village / City" required>
+
+            <button type="submit">Add Crop</button>
+        </form>
+        <p id="farmerMessage"></p>
+    </div>
+
+    <h2>Available Crop Listings</h2>
+    <div id="farmerCropList" class="cards"></div>
+</section>
+
+<!-- PAGE 3 BUYER -->
+
+<section id="buyer">
+    <h1>🛒 Buyer Dashboard</h1>
+
+    <div class="cards">
+        <div class="card">Individual Consumers</div>
+        <div class="card">Hotels & Restaurants</div>
+        <div class="card">Grocery Stores</div>
+        <div class="card">Food Processing Companies</div>
+        <div class="card">Wholesale Buyers</div>
+    </div>
+
+    <h2>Search Available Crops</h2>
+    <div class="form-box">
+        <input id="searchCrop" placeholder="Search Crop Name...">
+        <div id="buyerCropList"></div>
+    </div>
+
+    <h2>Place Your Order</h2>
+    <div class="form-box">
+        <form id="orderForm">
+            <input id="buyerName" placeholder="Buyer Name" required>
+
+            <input id="buyerMobile" type="tel"
+            placeholder="10 Digit Mobile Number"
+            pattern="[0-9]{10}" maxlength="10" required>
+
+            <select id="buyerType" required>
+                <option value="">Select Buyer Category</option>
+                <option>Individual Consumer</option>
+                <option>Hotel & Restaurant</option>
+                <option>Grocery Store</option>
+                <option>Food Processing Company</option>
+                <option>Wholesale Buyer</option>
+            </select>
+
+            <select id="selectedCrop" required>
+                <option value="">Select Crop</option>
+            </select>
+
+            <input id="orderQuantity" type="number"
+            placeholder="Required Quantity KG" min="1" required>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <p id="buyerMessage"></p>
+    </div>
+</section>
+
+<!-- PAGE 4 ORDER TRACKING -->
+
+<section id="orders">
+    <h1>📦 Order Management & Tracking</h1>
+
+    <div class="cards">
+        <div class="card"><h2 id="allOrders">0</h2>Total Orders</div>
+        <div class="card"><h2 id="pendingOrders">0</h2>Pending</div>
+        <div class="card"><h2 id="approvedOrders">0</h2>Approved</div>
+        <div class="card"><h2 id="completedOrders">0</h2>Completed</div>
+    </div>
+
+    <h2>All Orders</h2>
+    <div id="orderList"></div>
+</section>
+
+<section id="about">
+    <h2>About Our Project</h2>
+    <p>
+    Smart Farmer Procurement System connects farmers directly
+    with buyers. It reduces middlemen, supports transparent
+    pricing and simplifies agricultural procurement.
+    </p>
+</section>
+
+<footer>
+    <h3>🌾 Smart Farmer Procurement System</h3>
+    <p>Developed by Omkar Dagadkhair</p>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
